@@ -1,7 +1,7 @@
 ---
 image: "@assets/daddm-circle.svg"
 imageAlt: DadDm logo
-title: Папа DM
+title: Папстер Подземелий
 content: Ваш ресурс про настольные ролевые игры всей семьёй
 ---
 

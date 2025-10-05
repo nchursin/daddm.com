@@ -1,8 +1,12 @@
 ---
-title: Hey, I'm Jane Doe!
-description: this is meta description
-image: "@assets/profile/jane-doe.jpg"
+title: Добро пожаловать!
+description: описание
 draft: false
 ---
+<!-- image: "@assets/profile/jane-doe.jpg" -->
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis illum nesciunt commodi vel nisi ut alias excepturi ipsum, totam, labore tempora, odit ex iste tempore sed. Fugit voluptatibus perspiciatis assumenda nulla ad nihil, omnis vel, doloremque sit quam autem optio maiores, illum eius facilis et quo consectetur provident dolor similique! Enim voluptatem dicta expedita veritatis repellat dolorum impedit, provident quasi at.
+Меня зовут Никита, и я папа двух замечательных дочек. Мы с ними любим играть в настолки, в частности в Hero Kids (Маленькие Герои) и Dungeons & Dragons (Подземелья и Драконы).
+
+Какое-то время назад мне пришло в голову, что многи бы может и хотели начать погружаться в волшебный мир совместного рассказывания историй, но не знают, с чего начать. И я решил сделать этот сайт, чтобы поделиться нашим замечательным времяпрепровождением.
+
+Здесь вы найдёте приключения, советы ведущему и игрокам, персонажей и многое другое.
