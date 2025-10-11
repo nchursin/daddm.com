@@ -1,4 +1,4 @@
 ---
-title: Blog Posts
-description: The blog of Jane and John Doe
+title: Дополнительный контент
+description: Здесь будет всякий дополнительный контент, который я делаю для настолок
 ---

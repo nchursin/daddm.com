@@ -1,6 +1,6 @@
 ---
-title: Однстраничные приключения
-description: Приключения на один вечер
-image: "@assets/adventures/characters/cover.jpg"
-imageAlt: A white knight, painted dramatically
+title: Одностраничные приключения
+description: Короткие приключения на один вечер
+image: "@assets/adventures/onepagers/cover.png"
+imageAlt: Группа героев на входе в подземелье
 ---
