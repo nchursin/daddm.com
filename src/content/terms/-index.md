@@ -4,18 +4,18 @@ title: Terms & Conditions
 
 ## Copyright
 
-&copy; 2025 Jane Doe. All rights reserved.
+&copy; 2025 Nikita Chursin. All rights reserved.
 
 ## Reuse
 
 ### Source Code
 
-The source code for janedoe.com is protected under the MIT License. In short, you can do as you see fit, so long as you include the original copyright notice in any copy of the software.
+The source code for this site is protected under the MIT License. In short, you can do as you see fit, so long as you include the original copyright notice in any copy of the software.
 
 ```md
 The MIT License (MIT)
 
-Copyright (c) 2025 Jane Doe
+Copyright (c) 2025 Nikita Chursin
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -36,14 +36,20 @@ SOFTWARE.
 
 ### Content
 
-It is not permitted to mirror or re-publish the content of this website. That includes, for example, the words and images displayed on it. Write your own blog.
+"Папстер Подземелий" (c) by Nikita Chursin
+
+"Папстер Подземелий" is licensed under a
+Creative Commons Attribution 4.0 International License.
+
+You should have received a copy of the license along with this
+work. If not, see <https://creativecommons.org/licenses/by/4.0/>.
 
 ## Terms
 
-1. This site includes matters of opinion and speculation. All material is provided for informational purposes only.
-2. While I try to keep materials up-to-date and accurate, the currency, accuracy, and completeness of my work can not be guaranteed.
-3. You are responsible for whatever happens as a result of you reading or using materials from this site.
-4. These terms and conditions may be amended at any time in the future.
+1. Весь контент на этом сайте — личное мнение автора. Весь материал представлен исключительно в ознакомительных целях.
+2. Я стараюсь поддерживать актуальность материалов, но она не гарантирована.
+3. Только вы несёте ответственнсть за то, что происходит с вами при чтении и использовании материалов с этого сайта.
+4. Список этих условий может измениться в любй момент.
 
 ## Attributions
 

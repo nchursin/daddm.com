@@ -20,7 +20,7 @@ Things get a little more complicated when you want to create a new collection (o
 4. Lay out the structure of your entry's page. This will may consist of an `EntryLayout.astro` and a `CollectionLayout.astro` in the `/src/components/[collection]/` directory. These components will define how each entry and the collection as a whole will be displayed.
 5. Connect the new collection to the routing structure by adding a new page in `/src/pages/` that will handle the routing for your collection. This typically involves calling `getEntries()` or `getIndex()` from the collection's config in the page's script section to retrieve the entries that will be referenced on that page.
 
-For more context on how the content collections work, see the [/adventures/project-structure.md](/docs/project-structure.md) page.
+For more context on how the content collections work, see the [/docs/project-structure.md](/docs/project-structure.md) page.
 
 ## Theme Colors
 
@@ -60,7 +60,7 @@ Structural changes would be made among:
 External Resources:
 
 - [Google Fonts](https://fonts.google.com/)
-- [Mozilla Docs](https://developer.mozilla.org/en-US/adventures/Web/CSS/font-family)
+- [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family)
 - [Inter Font](https://rsms.me/inter/#)
 - [Manrope Font](https://www.gent.media/manrope)
 
@@ -167,7 +167,7 @@ Parameters:
 | ------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | Color   | The underlying background color of the element.                                                                                        |
 | Opacity | `0` is fully transparent and `1` is fully opaque. If a color is specified, the default opacity is `1`, and if not, it's transparent.   |
-| Blur    | The [blur](https://tailwindcss.com/adventures/blur) is applied to the element's background, and the element itself is made semi-transparent. |
+| Blur    | The [blur](https://tailwindcss.com/docs/blur) is applied to the element's background, and the element itself is made semi-transparent. |
 | Border  | The border around the element. By default this effect is subtle, but adds a nice touch to the glass effect.                            |
 | Shadow  | The shadow around the element, giving it a bit of depth.                                                                               |
 

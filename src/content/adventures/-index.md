@@ -1,5 +1,5 @@
 ---
-title: Documentation
-description: This is the adventures
+title: Приключения
+description: Здесь можно найти как кампании, так и одноразовые (одностраничные) приключения
 draft: false
 ---

@@ -78,6 +78,22 @@ const adventures = defineCollection({
     }),
 });
 
+const tips = defineCollection({
+  loader: glob({
+    pattern: "**\/[^_]*.{md,mdx}",
+    base: "./src/content/tips",
+  }),
+  schema: ({ image }) =>
+    searchable.extend({
+      pubDate: z.date().optional(),
+      modDate: z.date().optional(),
+      image: image().optional(),
+      imageAlt: z.string().default("image"),
+      hideToc: z.boolean().default(false),
+      hideNav: z.boolean().default(false),
+    }),
+});
+
 const home = defineCollection({
   loader: glob({ pattern: "-index.{md,mdx}", base: "./src/content/home" }),
   schema: ({ image }) =>
@@ -170,7 +186,8 @@ export const collections = {
   about,
   authors,
   blog,
-  adventures: adventures,
+  adventures,
+  tips,
   home,
   indexCards,
   poetry,
