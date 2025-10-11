@@ -1,9 +1,9 @@
 ---
 import BaseLayout from "@components/base/BaseLayout.astro";
-import BlogCard from "@components/blog/Card.astro";
+import BlogCard from "@components/additionalContent/Card.astro";
 import Pagination from "@components/common/Pagination.astro";
 import PageHeader from "@components/common/PageHeader.astro";
-import BlogSidebar from "@components/blog/Sidebar.astro";
+import BlogSidebar from "@components/additionalContent/Sidebar.astro";
 import type { BlogEntry } from "@/types";
 
 interface Props {
@@ -27,12 +27,15 @@ const {
 } = Astro.props;
 ---
 
-<BaseLayout title={entryIndex.data.title} description={entryIndex.data.description}>
+<BaseLayout
+  title={entryIndex.data.title}
+  description={entryIndex.data.description}
+>
   <PageHeader title={entryIndex.data.title} />
   <section class="section">
     <div class="flex container">
       <div class="row px-0 mx-0 w-full">
-        <!-- blog posts -->
+        <!-- additionalContent posts -->
         <div class="col-12 lg:col-8 lg:p-0">
           {
             entries.map((entry) => (
@@ -42,7 +45,7 @@ const {
             ))
           }
           <Pagination
-            collection="blog"
+            collection="additionalContent"
             pageIndex={pageIndex}
             pageCount={pageCount}
           />

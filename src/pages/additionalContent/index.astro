@@ -1,5 +1,5 @@
 ---
-import CollectionLayout from "@components/blog/CollectionLayout.astro";
+import CollectionLayout from "@components/additionalContent/CollectionLayout.astro";
 import { getTaxaMultiset, getTaxa } from "@lib/taxonomyParser";
 import { getEntries, getIndex } from "@lib/contentParser";
 import { sortByDate } from "@lib/sortFunctions";
@@ -8,12 +8,15 @@ import type { BlogEntry } from "@/types";
 const { slug } = Astro.params;
 const currentPageIndex = slug && !isNaN(Number(slug)) ? Number(slug) : 1;
 
-const entryIndex = (await getIndex("blog")) as BlogEntry;
-const entries = (await getEntries("blog", sortByDate)) as BlogEntry[];
+const entryIndex = (await getIndex("additionalContent")) as BlogEntry;
+const entries = (await getEntries(
+  "additionalContent",
+  sortByDate,
+)) as BlogEntry[];
 
-const allCategories = await getTaxaMultiset("blog", "categories");
-const categories = await getTaxa("blog", "categories");
-const tags = await getTaxa("blog", "tags");
+const allCategories = await getTaxaMultiset("additionalContent", "categories");
+const categories = await getTaxa("additionalContent", "categories");
+const tags = await getTaxa("additionalContent", "tags");
 
 const entriesPerPage = 4;
 const indexOfLastEntry = currentPageIndex * entriesPerPage;

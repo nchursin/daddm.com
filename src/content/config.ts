@@ -111,68 +111,20 @@ const home = defineCollection({
     }),
 });
 
-const indexCards = defineCollection({
-  loader: glob({
-    pattern: "-index.{md,mdx}",
-    base: "./src/content/index-cards",
-  }),
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    cards: z.array(z.string()),
-  }),
-});
-
-const poetry = defineCollection({
-  loader: glob({ pattern: "**\/[^_]*.{md,mdx}", base: "./src/content/poetry" }),
-  schema: ({ image }) =>
-    searchable.extend({
-      date: z.date().optional(),
-      image: image().optional(),
-      imageAlt: z.string().default("image"),
-      author: reference("authors").optional(),
-    }),
-});
-
-const portfolio = defineCollection({
-  loader: glob({
-    pattern: "-index.{md,mdx}",
-    base: "./src/content/portfolio",
-  }),
-  schema: searchable.extend({
-    projects: z.array(
-      z.object({
-        title: z.string(),
-        github: z.string().optional(),
-        technologies: z.array(z.string()).optional(),
-        content: z.array(z.string()).optional(),
-      }),
-    ),
-  }),
-});
-
-const recipes = defineCollection({
+const additionalContent = defineCollection({
   loader: glob({
     pattern: "**\/[^_]*.{md,mdx}",
-    base: "./src/content/recipes",
+    base: "./src/content/additionalContent",
   }),
   schema: ({ image }) =>
     searchable.extend({
       date: z.date().optional(),
       image: image().optional(),
       imageAlt: z.string().default("image"),
-      author: reference("authors").optional(),
-      prepTime: z.number().optional(),
-      servings: z.number().optional(),
-      diet: z.string().optional(),
-      ingredients: z
-        .object({
-          list: z.array(z.string()),
-          qty: z.array(z.string()),
-        })
-        .optional(),
-      instructions: z.array(z.string()).optional(),
-      notes: z.array(z.string()).optional(),
+      categories: z.array(z.string()).optional(),
+      tags: z.array(z.string()).optional(),
+      complexity: z.number().default(1),
+      hideToc: z.boolean().default(false),
     }),
 });
 
@@ -189,9 +141,6 @@ export const collections = {
   adventures,
   tips,
   home,
-  indexCards,
-  poetry,
-  portfolio,
-  recipes,
   terms,
+  additionalContent,
 };

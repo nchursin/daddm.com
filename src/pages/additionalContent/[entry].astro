@@ -1,12 +1,15 @@
 ---
 import type { BlogEntry } from "@/types";
 import { sortByDate } from "@lib/sortFunctions";
-import EntryLayout from "@components/blog/EntryLayout.astro";
+import EntryLayout from "@components/additionalContent/EntryLayout.astro";
 import { getEntries } from "@lib/contentParser";
 import similerItems from "@lib/similarItems";
 
 export async function getStaticPaths() {
-  const entries = (await getEntries("blog", sortByDate)) as BlogEntry[];
+  const entries = (await getEntries(
+    "additionalContent",
+    sortByDate,
+  )) as BlogEntry[];
   const paths = entries.map((entry) => ({
     params: {
       entry: entry.id,
