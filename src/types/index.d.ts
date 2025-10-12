@@ -27,6 +27,8 @@ export type SearchableEntry =
 export type SocialLinks = {
   discord?: string;
   email?: string;
+  telegram?: string;
+  boosty?: string;
   facebook?: string;
   github?: string;
   instagram?: string;

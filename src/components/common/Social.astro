@@ -6,6 +6,8 @@ import {
   FaEnvelope,
   FaFacebook,
   FaGithub,
+  FaTelegram,
+  FaDonate,
   FaInstagram,
   FaLinkedin,
   FaPinterest,
@@ -54,6 +56,38 @@ const iconClass =
         >
           <span class="sr-only">Email</span>
           <FaEnvelope className="w-6 h-6" />
+        </a>
+      </li>
+    )
+  }
+  {
+    links.boosty && (
+      <li class={liClass}>
+        <a
+          class={iconClass}
+          aria-label="Boosty"
+          href={links.boosty}
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          <span class="sr-only">Boosty</span>
+          <FaDonate className="w-6 h-6" />
+        </a>
+      </li>
+    )
+  }
+  {
+    links.telegram && (
+      <li class={liClass}>
+        <a
+          class={iconClass}
+          aria-label="Email"
+          href={`mailto:${links.telegram}`}
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          <span class="sr-only">Telegram</span>
+          <FaTelegram className="w-6 h-6" />
         </a>
       </li>
     )
