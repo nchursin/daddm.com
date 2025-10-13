@@ -21,14 +21,12 @@ export const upperHumanize = (content: string) => {
   return content
     .toLowerCase()
     .replace(/-/g, " ")
-    .replace(/(^\w{1})|(\s{1}\w{1})/g, (match) => match.toUpperCase());
+    .replace(/(^[а-яa-z]{1})|(\s{1}\w{1})/g, (match) => match.toUpperCase());
 };
 
 // hyphen to space, lowercase all letters
 export const lowerHumanize = (content: string) => {
-  return content
-    .toLowerCase()
-    .replace(/-/g, " ");
+  return content.toLowerCase().replace(/-/g, " ");
 };
 
 // plainify
