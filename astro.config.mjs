@@ -11,27 +11,48 @@ import remarkMath from "remark-math";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://janedoe.com",
-  base: "/",
+  site: "http://daddm.com",
+  base: "/daddm.com",
   trailingSlash: "ignore",
   prefetch: {
-    prefetchAll: true
+    prefetchAll: true,
   },
-  integrations: [react(), sitemap(), tailwind({
-    config: {
-      applyBaseStyles: false
-    }
-  }), AutoImport({
-    imports: ["@components/common/Button.astro", "@shortcodes/Accordion", "@shortcodes/Notice", "@shortcodes/Youtube", "@shortcodes/Tabs", "@shortcodes/Tab"]
-  }), mdx()],
+  integrations: [
+    react(),
+    sitemap(),
+    tailwind({
+      config: {
+        applyBaseStyles: false,
+      },
+    }),
+    AutoImport({
+      imports: [
+        "@components/common/Button.astro",
+        "@shortcodes/Accordion",
+        "@shortcodes/Notice",
+        "@shortcodes/Youtube",
+        "@shortcodes/Tabs",
+        "@shortcodes/Tab",
+      ],
+    }),
+    mdx(),
+  ],
   markdown: {
-    remarkPlugins: [remarkToc, [remarkCollapse, {
-      test: "Table of contents"
-    }], remarkMath],
+    remarkPlugins: [
+      remarkToc,
+      [
+        remarkCollapse,
+        {
+          test: "Table of contents",
+        },
+      ],
+      remarkMath,
+    ],
     rehypePlugins: [[rehypeKatex, {}]],
     shikiConfig: {
       theme: "dark-plus", // https://shiki.style/themes
     },
-    extendDefaultPlugins: true
+    extendDefaultPlugins: true,
   },
 });
+
