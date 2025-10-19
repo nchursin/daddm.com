@@ -1,7 +1,8 @@
 ---
 title: Создание персонажа для детей
 description: Как помочь ребёнку придумтаь себе персонажа для игры
-imageAlt: "Painting of a hooded figure with light beaming out from his chest"
+image: "@assets/tips/playing_with_kids/character_creation/cover.png"
+imageAlt: "Отец и дочь придумывают персонажа"
 pubDate: 2025-09-15
 modDate: 2025-10-12
 ---
