@@ -1,7 +1,7 @@
 ---
 title: Вдохновение героев в игре с детьми
 description: Как изменить значение кубика после его броска, не привлекая внимания монстров.
-image: "@assets/tips/playing_with_kids/20251030_inspiration/cover.jpg"
+image: "@assets/tips/playing_with_kids/20251030_inspiration/cover.png"
 pubDate: 2025-10-30
 modDate: 2025-10-30
 ---
