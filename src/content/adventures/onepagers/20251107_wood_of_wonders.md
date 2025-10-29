@@ -94,6 +94,6 @@ _Это перевод [приключения](https://dmingdad.com/woods-of-wo
 ## Карты
 Карты были любезно предоставлены Дайсоном Логосом. Обязательно загляните на его сайт — там много отличных карт для НРИ: [https://dysonlogos.blog/](https://dysonlogos.blog/)
 ### Город Даклинг, север
-![image](@assets/adventures/onepagers/20251107_wood_of_wonders/darklingtown-north.png)
+![image](@assets/adventures/onepagers/20251107_wood_of_wonders/darklingtown-north.jpg)
 ### Город Даклинг, юг
-![image](@assets/adventures/onepagers/20251107_wood_of_wonders/darklingtown-south.png) 
+![image](@assets/adventures/onepagers/20251107_wood_of_wonders/darklingtown-south.jpg) 
