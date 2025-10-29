@@ -1,5 +1,5 @@
 ---
-image: "@assets/adventures/onepagers/20251107_wood_of_wonders/cover.jpg"
+image: "@assets/adventures/onepagers/20251107_wood_of_wonders/cover.webp"
 title: Волшебный лес (перевод)
 description: Перевод приключения The Woods of Wonders с сайта DMingDad.
 pubDate: 2025-11-07
