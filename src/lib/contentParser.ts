@@ -1,5 +1,6 @@
 import { getEntry, getCollection, type CollectionKey } from "astro:content";
 import type { GenericEntry } from "@/types";
+import { tuple } from "astro:schema";
 
 export const getIndex = async (collection: CollectionKey): Promise<GenericEntry> => {
   const index = await getEntry(collection, "-index");
@@ -10,7 +11,8 @@ export const getEntries = async (
   collection: CollectionKey,
   sortFunction?: ((array: any[]) => any[]),
   noIndex = true,
-  noDrafts = true
+  noDrafts = true,
+  onlyPublished = true,
 ): Promise<GenericEntry[]> => {
   let entries: GenericEntry[] = await getCollection(collection);
   entries = noIndex
@@ -18,6 +20,10 @@ export const getEntries = async (
     : entries;
   entries = noDrafts
     ? entries.filter((entry: GenericEntry) => 'draft' in entry.data && !entry.data.draft)
+    : entries;
+  const now = new Date();
+  entries = onlyPublished
+    ? entries.filter((entry: GenericEntry) => 'pubDate' in entry.data && entry.data.pubDate && entry.data.pubDate <= now)
     : entries;
   entries = sortFunction ? sortFunction(entries) : entries;
   return entries;
