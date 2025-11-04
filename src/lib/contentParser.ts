@@ -7,6 +7,10 @@ export const getIndex = async (collection: CollectionKey): Promise<GenericEntry>
   return index;
 }
 
+const isPublished = (entry: GenericEntry) => 'pubDate' in entry.data && entry.data.pubDate && entry.data.pubDate <= new Date()
+const noPublishDate = (entry: GenericEntry) => !('pubDate' in entry.data) || !entry.data.pubDate
+const isPublishedOrNoPubDate = (entry: GenericEntry) => isPublished(entry) || noPublishDate(entry)
+
 export const getEntries = async (
   collection: CollectionKey,
   sortFunction?: ((array: any[]) => any[]),
@@ -21,9 +25,8 @@ export const getEntries = async (
   entries = noDrafts
     ? entries.filter((entry: GenericEntry) => 'draft' in entry.data && !entry.data.draft)
     : entries;
-  const now = new Date();
   entries = onlyPublished
-    ? entries.filter((entry: GenericEntry) => 'pubDate' in entry.data && entry.data.pubDate && entry.data.pubDate <= now)
+    ? entries.filter(isPublishedOrNoPubDate)
     : entries;
   entries = sortFunction ? sortFunction(entries) : entries;
   return entries;
