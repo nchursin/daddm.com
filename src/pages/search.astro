@@ -18,7 +18,9 @@ const searchableCollections = [
 const searchList = (await getEntriesBatch(
   searchableCollections,
   undefined,
-  false
+  false,
+  true,
+  true
 )) as SearchableEntry[];
 ---
 

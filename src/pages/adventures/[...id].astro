@@ -3,10 +3,10 @@ import type { DocsEntry, MenuItem } from "@/types";
 import EntryLayout from "@components/adventures/EntryLayout.astro";
 import CollectionLayout from "@components/adventures/CollectionLayout.astro";
 import { getEntries, getEntriesInGroup, getGroups } from "@lib/contentParser";
-import { sortByTitle } from "@lib/sortFunctions";
+import { sortByPubDate } from "@lib/sortFunctions";
 
 export async function getStaticPaths() {
-  const entries = (await getEntries("adventures", sortByTitle)) as DocsEntry[];
+  const entries = (await getEntries("adventures", sortByPubDate)) as DocsEntry[];
 
   const paths = entries.map((entry) => {
     const segments = entry.id.replace("/-index", "").split("/");
@@ -30,18 +30,18 @@ export async function getStaticPaths() {
 const { entry, isGroup } = Astro.props;
 const groupName = entry.id.replace("/-index", "");
 const groupEntries = isGroup
-  ? ((await getEntriesInGroup("adventures", groupName, sortByTitle)) as DocsEntry[])
+  ? ((await getEntriesInGroup("adventures", groupName, sortByPubDate)) as DocsEntry[])
   : [];
 
 // Construct Doc Browser menu
 const browserMenu: MenuItem[] = [];
-const groups = (await getGroups("adventures", sortByTitle)) as DocsEntry[];
+const groups = (await getGroups("adventures", sortByPubDate)) as DocsEntry[];
 await Promise.all(
   groups.map(async (group) => {
     const groupEntries = (await getEntriesInGroup(
       "adventures",
       group.id.replace("/-index", ""),
-      sortByTitle
+      sortByPubDate
     )) as DocsEntry[];
     browserMenu.push({
       title: group.data.title,
